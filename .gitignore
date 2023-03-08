@@ -1,3 +1,6 @@
+# Remove large csv files:
+
+**/outputs/**
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
