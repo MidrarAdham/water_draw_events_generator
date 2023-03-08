@@ -1,4 +1,4 @@
-# Created by Tylor Slay
+# Author: Tylor Slay
 
 import numpy as np
 import pandas as pd
