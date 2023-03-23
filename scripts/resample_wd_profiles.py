@@ -54,7 +54,8 @@ class resampling():
 
             if self.elapsed_time >= pd.Timedelta(f'{self.resampling_rate_threshold}'):
                 new_row = {'timestamp':pd.Timedelta(f'{self.resampling_rate_threshold}'), 'draw':self.sum_draw}
-                self.new_df = self.new_df.append(new_row, ignore_index=True)
+                new_row_df = pd.DataFrame([new_row])
+                self.new_df = pd.concat([self.new_df, new_row_df], ignore_index=True)
                 self.elapsed_time = self.elapsed_time - pd.Timedelta(f'{self.resampling_rate_threshold}')
                 self.sum_draw = 0
         
@@ -63,32 +64,33 @@ class resampling():
     def create_full_day_df(self):
 
         self.new_df['timestamp'] = pd.to_datetime(self.new_df['timestamp']).dt.floor('min')
-
         self.new_df['timestamp'] = pd.to_datetime(f'{self.simulation_date}' + self.new_df['timestamp'].dt.strftime(' %H:%M:%S'))
-
         data = {'timestamp':pd.date_range(start=f'{self.simulation_date} {self.simulation_starting_time}', end=f'{self.simulation_date} {self.simulation_ending_time}', freq=f'{self.datetime_one_minute}'),
                 'draw':np.zeros(self.resampling_rate)}
         
         full_day_df = pd.DataFrame(data)
-
         self.merged_dfs = pd.merge(full_day_df, self.new_df, on='timestamp', how='left')
-        
         self.merged_dfs['draw_x'] = self.merged_dfs['draw_x'].fillna(self.merged_dfs['draw_y'])
-
         self.merged_dfs = self.merged_dfs.drop('draw_x', axis=1)
-
         self.merged_dfs = self.merged_dfs.rename(columns={'draw_y':'draw'})
-
         self.merged_dfs['draw'] = (self.merged_dfs['draw'].fillna(0)).round(6)
 
-    def wr_csv(self):
-        self.file_counter += 1
-        self.merged_dfs.to_csv(f'{self.output_files}/wd_{self.file_counter}.csv', index = False)
+    def wr_csv(self, files):
+        
+        bedroom_num = ['1br','2br','3br','4br','5br']
+        files_index = files.split('dwh-')[1]
+        
+        for br in bedroom_num:
+            if br in files:
+                output_file_names = f'{br}_{files_index}'
+        
+        self.merged_dfs.to_csv(f'{self.output_files}/wd_{output_file_names}', index = False, header=False)
 
 if __name__ == '__main__':
     resample_data = resampling()
+    
     for files in os.listdir(resample_data.wd_files):
         if files.endswith('csv'):
             resample_data.sum_draws(files)
             resample_data.create_full_day_df()
-            resample_data.wr_csv()
+            resample_data.wr_csv(files)

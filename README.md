@@ -7,6 +7,8 @@ Based on the standard DHW sheets.
 ## Requirements:
 
 - Python3 
+- GridLAB-D (mandatory for testing)
+  - GridLAB-D can be easily installed from [**here.**](https://github.com/gridlab-d/gridlab-d/releases)
 
 ## usage:
 - Clone this repository to your local machine
@@ -20,7 +22,7 @@ Based on the standard DHW sheets.
     
     ```python3 unique.py```
 
-  - The above command will export many, stacked water draw profiles.
+  - The above command will export several stacked water draw profiles.
 ---
 - Run the resample_wd_profiles script:
     
@@ -29,3 +31,13 @@ Based on the standard DHW sheets.
   - The above command will export full-day water draw profiles with a one-minute time resolution.
   - The time resolution can be adjusted from the script, as well as the starting time and ending time.
   - Instructions are available in the 'resample_wd_profiles' script.
+---
+- To test the exported water draw profiles on water heater objects using GridLAB-D:
+  
+  - Change directory to the glm file:
+    - ```cd populated_13_node_feeder_whs/glm/```
+  - Run the GridLAB-D file using the following command in your terminal:
+    - ```gridlabd 13_node_feder_whs.glm```
+  - The simulation may take some time, depending on your OS. Once the simulation is done, the output files can be found in the following directory:
+    - ```cd glm_output/```
+  - Within the above directory, you'll find 39 files. Each file contains data for 25 water heaters in one-minute resolution.

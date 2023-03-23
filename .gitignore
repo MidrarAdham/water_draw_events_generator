@@ -1,6 +1,12 @@
 # Remove large csv files:
 
 **/outputs/**
+**/populated_13_node_feeder_whs/wd_files/**
+
+# Remove temp files
+
+**/populated_13_node_feeder_whs/python/plots_py.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
