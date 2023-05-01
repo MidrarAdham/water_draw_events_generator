@@ -20,7 +20,7 @@ Based on the standard DHW sheets.
 ----
 - Run the unique.py script:
     
-    ```python3 unique.py```
+    ```python3 dhw_daily.py```
 
   - The above command will export several stacked water draw profiles.
 ---
@@ -34,7 +34,7 @@ Based on the standard DHW sheets.
 ---
 - To test the exported water draw profiles on water heater objects using GridLAB-D:
   
-  - Change directory to the glm file:
+  - Change the directory to the glm file:
     - ```cd populated_13_node_feeder_whs/glm/```
   - Run the GridLAB-D file using the following command in your terminal:
     - ```gridlabd 13_node_feder_whs.glm```

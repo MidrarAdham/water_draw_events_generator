@@ -1,11 +1,11 @@
-# file...... ./../glm/glm_output/meter_39.csv
-# date...... Wed Mar 22 18:27:37 2023
+# file...... ./glm_output/meter_39.csv
+# date...... Tue Mar 28 22:33:18 2023
 # user...... deras
 # host...... (null)
 # trigger... (none)
 # interval.. 60
 # limit..... 0
-# timestamp,trip_node_meter_950:measured_real_power,trip_node_meter_951:measured_real_power,trip_node_meter_952:measured_real_power,trip_node_meter_953:measured_real_power,trip_node_meter_954:measured_real_power,trip_node_meter_955:measured_real_power,trip_node_meter_956:measured_real_power,trip_node_meter_957:measured_real_power,trip_node_meter_958:measured_real_power,trip_node_meter_959:measured_real_power
+# timestamp,tn_meter_3br_29:measured_real_power,tn_meter_2br_164:measured_real_power,tn_meter_3br_77:measured_real_power,tn_meter_1br_106:measured_real_power,tn_meter_5br_152:measured_real_power,tn_meter_3br_312:measured_real_power,tn_meter_3br_28:measured_real_power,tn_meter_3br_167:measured_real_power,tn_meter_3br_315:measured_real_power,tn_meter_1br_170:measured_real_power
 2021-12-25 00:00:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0
 2021-12-25 00:01:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0
 2021-12-25 00:02:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0

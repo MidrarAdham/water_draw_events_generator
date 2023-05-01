@@ -1,11 +1,11 @@
-# file...... ./../glm/glm_output/meter_1.csv
-# date...... Wed Mar 22 18:27:37 2023
+# file...... ./glm_output/meter_1.csv
+# date...... Tue Mar 28 22:33:18 2023
 # user...... deras
 # host...... (null)
 # trigger... (none)
 # interval.. 60
 # limit..... 0
-# timestamp,trip_node_meter_0:measured_real_power,trip_node_meter_1:measured_real_power,trip_node_meter_2:measured_real_power,trip_node_meter_3:measured_real_power,trip_node_meter_4:measured_real_power,trip_node_meter_5:measured_real_power,trip_node_meter_6:measured_real_power,trip_node_meter_7:measured_real_power,trip_node_meter_8:measured_real_power,trip_node_meter_9:measured_real_power,trip_node_meter_10:measured_real_power,trip_node_meter_11:measured_real_power,trip_node_meter_12:measured_real_power,trip_node_meter_13:measured_real_power,trip_node_meter_14:measured_real_power,trip_node_meter_15:measured_real_power,trip_node_meter_16:measured_real_power,trip_node_meter_17:measured_real_power,trip_node_meter_18:measured_real_power,trip_node_meter_19:measured_real_power,trip_node_meter_20:measured_real_power,trip_node_meter_21:measured_real_power,trip_node_meter_22:measured_real_power,trip_node_meter_23:measured_real_power,trip_node_meter_24:measured_real_power
+# timestamp,tn_meter_5br_231:measured_real_power,tn_meter_5br_134:measured_real_power,tn_meter_2br_318:measured_real_power,tn_meter_1br_143:measured_real_power,tn_meter_5br_292:measured_real_power,tn_meter_4br_48:measured_real_power,tn_meter_2br_296:measured_real_power,tn_meter_3br_166:measured_real_power,tn_meter_3br_164:measured_real_power,tn_meter_5br_339:measured_real_power,tn_meter_3br_66:measured_real_power,tn_meter_4br_230:measured_real_power,tn_meter_4br_350:measured_real_power,tn_meter_4br_269:measured_real_power,tn_meter_2br_248:measured_real_power,tn_meter_1br_266:measured_real_power,tn_meter_5br_192:measured_real_power,tn_meter_5br_249:measured_real_power,tn_meter_1br_175:measured_real_power,tn_meter_2br_140:measured_real_power,tn_meter_5br_299:measured_real_power,tn_meter_5br_208:measured_real_power,tn_meter_2br_305:measured_real_power,tn_meter_1br_5:measured_real_power,tn_meter_1br_297:measured_real_power
 2021-12-25 00:00:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0
 2021-12-25 00:01:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0
 2021-12-25 00:02:00 UTC,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0,+0
