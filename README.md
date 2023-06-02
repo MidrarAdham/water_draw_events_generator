@@ -1,24 +1,3 @@
-sequenceDiagram
-    %% EDMCore-->EDMCore:connect_to_gridappsd
-    %% EDMCore-->EDMCore:load_config_from_file
-    %% EDMCore-->EDMCore:establish_line_mrid
-    %% EDMCore-->EDMCore:establish_mrid_name_lookup_table
-    %% EDMCore-->EDMCore:connect_to_simulation
-    %% EDMCore-->EDMCore:initialize_sim_start_time
-    %% EDMCore-->EDMCore:initialize_sim_mrid
-    %% EDMCore-->EDMCore:create_objects
-    %% EDMCore-->EDMCore: initialize_all_der_s
-    EDMCore->>+DERSHistoricalDataInput: initialize_der_s
-    DERSHistoricalDataInput-->DERSHistoricalDataInput:open_input_file
-    DERSHistoricalDataInput-->DERSHistoricalDataInput:read_input_file
-    EDMCore->>+DERAssignmentHandler:create_assignment_lookup_table
-    EDMCore->>+DERAssignmentHandler:assign_all_ders
-    DERAssignmentHandler->>+DERSHistoricalDataInput:assign_der_s_to_der_em
-    DERSHistoricalDataInput-->DERSHistoricalDataInput:get_mrid_for_der_on_bus
-    DERSHistoricalDataInput-->DERSHistoricalDataInput:append_new_values_to_association_table
-    EDMCore->>+DERIdentificationManager:initialize_association_lookup_table
-    DERIdentificationManager->>+DERAssignmentHandler:get association_table
-
 # water_draw_events_generator
 
 Based on the standard DHW sheets.
